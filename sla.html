@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Gerador de Gráficos em Segundo Plano</title>
+  <script src="https://code.jscharting.com/latest/jscharting.js"></script>
+
+  <style>
+    .tela {
+      display: none;
+    }
+    .ativa {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Tela 1 -->
+  <div id="tela1" class="tela ativa">
+    <h1>Tela Principal</h1>
+    <button onclick="trocarTela('tela2')">Ir para outra tela</button>
+    <button onclick="iniciarGeracaoGraficos()">Iniciar Geração de Gráficos</button>
+  </div>
+
+  <!-- Tela 2 -->
+  <div id="tela2" class="tela">
+    <h1>Outra Tela</h1>
+    <button onclick="trocarTela('tela1')">Voltar para Tela Principal</button>
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
